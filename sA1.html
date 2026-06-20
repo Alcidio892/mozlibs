@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="styleS.css">
+       
+       <title>Categoria 1</title>
+  </head>
+  <body>
+    
+    <header>
+      <h2>MozLibs</h2>
+    </header>
+    
+    <div class="banner-topo">
+      colar
+    </div>
+    
+     <div id="artigo-atual"></div>
+
+    <div class="navegacao">
+        <button id="btnAnterior">Anterior</button>
+        <button id="btnSeguinte">Seguinte</button>
+    </div>
+
+    <div class="contador" id="contador"></div>
+
+    <script>
+        // AQUI TU ESCREVE TODOS TEUS ARTIGOS IGUAL FAZIA NO.txt
+        const artigos = [
+            {
+                titulo: "Por que algumas pessoas nunca enriquecem",
+                
+                subtiulo: "\nO erro invisível que mantém milhões trabalhando a vida inteira sem construir riqueza",
+                
+                texto: "\nMuitas pessoas acreditam que enriquecer depende apenas de ganhar muito dinheiro.\n\nEssa é uma das maiores ilusões do mundo moderno.\n\nExistem pessoas que recebem salários elevados e algumas continuam endividadas durante décadas. Ao mesmo tempo, existem pessoas com rendimentos modestos que, ao longo dos anos, constro patrimônios sólidos.\n\nO dinheiro não segue apenas quem trabalha mais.\n\nEle costuma seguir quem entende como ele funciona.\n\nEssa diferença parece pequena, mas muda completamente o destino financeiro de uma pessoa.\n\nQuando você percebe isso, começa a enxergar que a riqueza não nasce apenas de esforço. Ela nasce das decisões repetidas ao longo do tempo."
+            },
+            {
+                titulo: "O jogo que quase ninguém percebe",
+                
+                subtiulo:  "\nImagine duas pessoas.",
+                
+                texto:"\nA primeira trabalha oito horas por dia durante trinta anos.\n\nRecebe o sálario, paga as contas, compra roupas, troca de celular sempre que surge um novo modelo, financia um carro e espera pelas férias e sentir que todo o esforço valeu a pena.\n\nNo fim do mês, sobra muito pouco.\n\nA segunda pessoa também trabalha.\n\nMas ela faz algo diferente.\n\nSempre que recebe dinheiro pergunta:\n\n“Como posso transformar parte desse dinheiro em algo que continue produzindo mais dinheiro?”\n\nEssa pergunta muda tudo.\n\nEnquanto a primeira compra apenas despesas. a segunda compra ativos.\n\nEnquanto uma troca tempo por dinheiro, a outra começa a fazer o dinheiro trabalhar por ela.\n\nEssa é uma mudança de mentalidade, não de sorte."
+            },
+            {
+                titulo: "O verdadeiro significado da riqueza",
+                
+                subtiulo: "\nMuitas pessoas confundem riqueza com aparência.",
+                
+                texto: "\nUma casa enorme, um carro de luxo, roupas caras, viagens frequentes.\n\nTudo isso pode existir… e ainda assim esconder uma vida cheio de dívidas.\n\nRiqueza não é aquilo que todos veem.\n\nRiqueza é aquilo que continua existindo mesmo quando ninguém está olhando.\n\nEla é formada pelos ativos que geram renda, pelos investimentos acumulados, pelos conhecimentos que aumentam seu valor e pelos sistemas que continuam funcionando mesmo quando você não está trabalhando.\n\nÉ por isso que duas pessoas com o mesmo salário podem terminar a vida em situações completamente diferentes."
+            },
+            {
+              titulo: "Um exemplo que acontece todos os dias",
+              
+              subtiulo: "\nCarlos e João começaram a trabalhar na mesma empresa.",
+              
+              texto: "\nOs dois ganhavam exatamente o mesmo salário.\n\nCarlos gastava praticamente tudo.\nSempre que recebia um aumento, aumentava também seu padrão de vida.\n\nUm celular melhor, uma televisão maior, mais prestações, mais despesas.\n\nJoão fazia diferente.\nAprendeu novas habilidades, criou pequenos produtos, começou a investir parte do dinheiro, depois criou uma pequena biblioteca digital, com o tempo começou a vender alguns livros.\n\nNão aconteceu da noite para o dia. Levou anos.\n\nEnquanto Carlos precisava começar do zero todos os meses, João acumulava pequenas fontes de renda que cresciam lentamente.\n\nEssa é a construção da força contínua."
+            },
+            {
+              titulo: "O erro que prende a maioria das pessoas",
+              
+              subtiulo: "\nA maioria acredia que o problema está na quantidade de dinheiro que ganha.",
+              
+              texto: "\nMuitas vezes, o problema está no destino que esse dinheiro recebe.\nExiste uma diferença enorme entre consumir e construir.\n\nConsumir gera satisfação imediata.\nConstruir gera liberdade futura.\n\nVivemos numa época em que tudo incentiva o consumo.\n\nPromoções.\nPublicidade.\nRedes sociais.\nLançamentos constantes.\n\nÉ fácil gastar.\n\nDificil é construir ativos silenciosamente, enquanto ninguém percebe.\n\nMas são justamente esses ativos que mudam o futuro."
+            },
+            {
+              titulo: "O que pessoas bem-sucedidas costumam a compreender",
+              
+              subtiulo: "\nQuem constrói riqueza costuma entender algumas ideias simples.",
+              
+              texto: "\nPrimeiro: salário é importante, mas sozinho raramente cria liberdade financeira.\n\nSegundo: conhecimento é um ativo.\n\nUma habilidade que resolve problemas pode gerar renda.\n\nTerceiro: ativos trabalham mesmo quando você descansa.\n\nEles podem ser investimentos, pequenas empresas, conteúdos digitais , livros, cursos ou outras formas de gerar valor continuamente.\n\nQuarto: tempo é um multiplicador.\n\nPequenas decisões inteligentes repetidas durante anos produzem resultados que parecem extraordinários para quem observa apenas o final da história."
+            },
+            {
+              titulo: "O mundo digital mudou as regras",
+              
+              subtiulo: "\nNunca foi tão possível criar ativos.",
+              
+              texto: "\nHoje, uma pessoa pode escrever um pequeno e-book.\n\nCriar um curso.\nAbrir um canal de vídeos.\nVender modelos digitais.\nCriar aplicações simples.\n\nNem todos terão sucesso imediato.\n\nMas cada ativo criado aumenta as possibilidades de gerar renda além do salário.\n\nO mundo digital recompensa quem cria valor para muitas pessoas ao mesmo tempo.\n\nÉ uma forma de alavancagem: seu esforço pode alcançar milhares de pessoas sem que você precise repetir o mesmo trabalho individualmente."
+            },
+            {
+              titulo: "Como aplicar esse conceito na vida real",
+              
+              subtiulo: "\nVocê não precisa esperar ganhar muito dinheiro.",
+              
+              texto: "\nComece pequeno.\n\nReserve uma parte da sua renda para construir algo que permaneça.\n\nAprenda uma habilidade útil.\nLeia sobre investimentos.\nCrie conteúdo.\nDesenvolva um produto digital.\nEconomize para comprar ativos em vez de apenas acumular objetos.\n\nPergunte diariamente:\n\n“O que estou construindo hoje que poderá continuar gerando valor daqui a cinco anos?”\n\nEssa pergunta muda prioridades. E pode mudar o destinos."
+            },
+            {
+              titulo: "Conclusão",
+              
+              subtiulo: "\nAs pessoas que nunca enriquecem nem sempre trabalham pouco.",
+              
+              texto: "\nMuitas trabalham mais do que todos.\n\nO problema é que passam muito tempo construindo apenas a renda do mês seguinte, enquanto deixam de construir patrimônio, ativos e conhecimento.\n\nRiqueza não aparece em um único pagamento.\nEla nasce da soma de pequenas decisões inteligentes repetidas durante anos.\n\nCada livro lido.\nCada habilidade aprendida.\nCada ativo criado.\nCada investimento realizado.\n\nTudo isso funciona como pequenos tijolos de uma construção invisível.\n\nNo início, quase ninguém percebe.\nDepois de alguns anos, perguntam qual foi o segredo.\nMas o segredo nunca esteve em um golpe de sorte.\nSempre está na disciplina de construir hoje aquilo que continuará gerando valor amanhã."
+            },
+        ];
+
+        let artigoAtual = 0; // Começa no primeiro artigo
+
+        const container = document.getElementById('artigo-atual');
+        const btnAnterior = document.getElementById('btnAnterior');
+        const btnSeguinte = document.getElementById('btnSeguinte');
+        const contador = document.getElementById('contador');
+
+        // Função que mostra o artigo na tela
+        function mostrarArtigo() {
+            const artigo = artigos[artigoAtual];
+            container.innerHTML = `
+                <div class="artigo">
+                    <h2>${artigo.titulo}</h2>
+                    <h3>${artigo.subtiulo}
+                    <p>${artigo.texto}</p>
+                    
+                    <div class="banner-final">
+                    
+                    aquilo
+                    
+                    </div>
+                </div>
+            `;
+
+            // Atualiza contador: "Artigo 1 de 3"
+            contador.innerText = `Artigo ${artigoAtual + 1} de ${artigos.length}`;
+
+            // Desabilita botão "Anterior" se for o primeiro
+            btnAnterior.disabled = artigoAtual === 0;
+
+            // Desabilita botão "Seguinte" se for o último
+            btnSeguinte.disabled = artigoAtual === artigos.length - 1;
+        }
+
+        // Clique no botão Seguinte
+        btnSeguinte.addEventListener('click', () => {
+            if (artigoAtual < artigos.length - 1) {
+                artigoAtual++;
+                mostrarArtigo();
+            }
+        });
+
+        // Clique no botão Anterior
+        btnAnterior.addEventListener('click', () => {
+            if (artigoAtual > 0) {
+                artigoAtual--;
+                mostrarArtigo();
+            }
+        });
+
+        // Mostra o primeiro artigo quando abrir o site
+        mostrarArtigo();
+    </script>
+  </body>
+</html>
